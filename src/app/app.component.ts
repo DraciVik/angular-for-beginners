@@ -1,18 +1,11 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, Inject, Injector, OnInit} from '@angular/core';
-import {Course} from './model/course';
-import {Observable} from 'rxjs';
-import {AppConfig, CONFIG_TOKEN} from './config';
-import {COURSES} from '../db-data';
-import {CoursesService} from './courses/courses.service';
-import {createCustomElement} from '@angular/elements';
-import {CourseTitleComponent} from './course-title/course-title.component';
-
+import { Component } from '@angular/core';
+import { COURSES } from '../db-data';
+import { Course } from './model/course';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css'],
-})
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
 export class AppComponent implements OnInit {
 
     courses: Course[] = COURSES;
@@ -40,12 +33,10 @@ export class AppComponent implements OnInit {
 
     }
 
-    save(course: Course) {
-        this.coursesService.saveCourse(course)
-            .subscribe(
-                () => console.log('Course Saved!')
-            );
-    }
+  courses = COURSES;
 
 
+  onCourseSelected(course: Course) {
+    console.log('App component card clicked, event bubbled...', course);
+  }
 }

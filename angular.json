@@ -41,9 +41,6 @@
               {
                 "input": "node_modules/document-register-element/build/document-register-element.js"
               },
-              {
-                "input": "node_modules/document-register-element/build/document-register-element.js"
-              }
             ]
           },
           "configurations": {
@@ -169,6 +166,7 @@
   },
   "defaultProject": "angular-course",
   "cli": {
-    "analytics": "e878a578-eb4f-4c7c-bbaf-6f0c4ac42135"
+    "analytics": "3ac3ddb5-53ee-4464-b4bb-1363d03123d0"
+
   }
 }
