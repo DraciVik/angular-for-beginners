@@ -31,6 +31,7 @@ export const COURSES: any = [
     category: 'ADVANCED',
   },
 
+
   {
     id: 4,
     description: 'Angular for Beginners',
